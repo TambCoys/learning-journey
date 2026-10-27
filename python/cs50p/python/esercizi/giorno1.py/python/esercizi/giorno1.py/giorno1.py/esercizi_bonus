@@ -1,0 +1,8 @@
+def ms_to_laptime(ms):
+    minutes = ms // 60000
+    seconds = (ms % 60000) // 1000
+    milliseconds = ms % 1000
+    return f"{minutes}:{seconds:02d}.{milliseconds:03d}"
+
+def media_gol(gol_fatti, partite):
+    return round(gol_fatti / partite, 2) if partite > 0 else 0.0
